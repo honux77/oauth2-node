@@ -14,3 +14,18 @@ router.get("/", function (req, res, next) {
 });
 
 module.exports = router;
+
+router.get("/callback", (req, res, next) => {
+  const authCode = req.query.code;
+  res.render("callback", { authCode });
+});
+
+router.get("/next", (req, res, next) => {
+  req.authCode = req.query.code;
+  const payload = {
+    accessToken: "아직 없음",
+    refreshToken: "아직 없음",
+  };
+  //TODO: Implement
+  res.render("next", payload);
+});
