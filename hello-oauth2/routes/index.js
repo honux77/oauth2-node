@@ -40,7 +40,18 @@ router.get("/next", async (req, res, next) => {
 });
 
 //get user from github
-router.get("/user", (req, res, next) => {
+router.get("/user", async (req, res, next) => {
   const accessToken = req.query.token;
-  res.json({accessToken});
+  try {
+    const result = await axios.get('https://api.github.com/user', 
+    {
+      headers: { Authorization: `Bearer ${accessToken}`}
+    });
+
+    const data = result.data;
+    res.json({accessToken, data});
+
+  } catch (err) {
+    next(err);
+  }
 });
