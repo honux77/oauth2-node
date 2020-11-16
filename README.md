@@ -44,12 +44,36 @@ Simple GitHub Oauth2 practice for Node.js
 ```
 <출처: RFC6749>
 
+## 실행하기
+
+### 환경설정
+
+- hello-oauth2의 dev.env를 .env로 복사한다.
+- 깃헙 설정 - 개발자 모드 - 앱 생성을 통해 앱을 생성하고 CLIENT ID와 CLIENT SECRET 값을 수정한다.
+
+```
+HOST=http://127.0.0.1:3000
+GH_ID=github_client_id_here
+GH_SECRET=github_client_secret_here
+REDIRECT_URL=/callback
+SCOPE=user
+```
+
+### 실행
+
+```
+cd hello-oauth2
+npm install
+npm start
+```
+
 ## 사용한 모듈
 
 ```
 express
 express-handlebars
 axios
+dotenv
 ```
 
 ## 참고문서
