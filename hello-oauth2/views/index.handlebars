@@ -1,3 +1,29 @@
-<h1>Oauth2 practice</h1>
-<a href='https://github.com/login/oauth/authorize?client_id={{client_id}}&redirect_url={{redirect_url}}&scope={{scope}}'>
-깃헙 로그인</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OAuth 2 로그인 예제</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <!-- style.css 연결 -->
+  </head>
+  <body>
+    <div>
+      <h1>OAuth 2 로그인 예제</h1>
+      <h2>1단계: 깃헙 로그인 URL을 통해 로그인</h2>
+      <p>Client ID: {{client_id}}</p>
+      <p>Redirect URL: {{redirect_url}}</p>
+      <p>Scope: {{scope}}</p>
+      <p>State: {{state}}</p>
+      <p>Full URL</p>
+      <code>
+        https://github.com/login/oauth/authorize?client_id={{client_id}}&redirect_url={{redirect_url}}&scope={{scope}}&state={{state}}
+      </code>
+
+      <a
+        href="https://github.com/login/oauth/authorize?client_id={{client_id}}&redirect_url={{redirect_url}}&scope={{scope}}&state={{state}}"
+      >
+        깃헙으로 로그인
+      </a>
+    </div>
+  </body>
+</html>

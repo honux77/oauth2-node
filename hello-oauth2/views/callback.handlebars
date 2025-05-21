@@ -1,3 +1,18 @@
-<h1> 2단계: 인증 코드 획득</h1>
-<p> Authorization Code: {{authCode}}</p>
-<a href="/next?code={{authCode}}"> 다음 단계로</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth 2 로그인 예제</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"> <!-- style.css 연결 -->
+</head>
+<body>
+<div>
+    <h1> 2단계: 인증 코드 획득</h1>
+    <p> Authorization Code: {{authCode}}</p>
+    <p> Session State: {{sessionState}}</p>
+    <p> State from GitHub: {{state}}</p>
+<p> </p>
+<a href="/next?code={{authCode}}"> 클라이언트에서 깃헙으로 요청 보내기</a>
+</body>
+</html>

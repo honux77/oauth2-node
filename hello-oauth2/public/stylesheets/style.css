@@ -1,8 +1,53 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+code {
+  display: block;
+  background-color: #f8f9fa;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Courier New", Courier, monospace;
+  color: #212529;
+  overflow-x: auto;
+  margin-top: 12px;
+  white-space: pre-wrap; /* 줄바꿈 추가 */
+  word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
 }
 
 a {
-  color: #00B7FF;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #0056b3;
 }
